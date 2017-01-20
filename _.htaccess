@@ -1,0 +1,47 @@
+# Turn on URL rewriting
+RewriteEngine On
+
+# Installation directory
+#RewriteBase /
+RewriteBase /dropbox/poker-timer/
+ErrorDocument 404 /dropbox/poker-timer/
+
+# Protect application and system files from being viewed
+RewriteCond $1 ^(app|_system|_modules)
+
+
+# Rewrite to index.php/access_denied/URL
+RewriteRule ^(.*)$ index.php/access_denied/$1 [PT,L]
+
+
+# Allow these directories and files to be displayed directly:
+RewriteCond $1 ^(index.php|robots\.txt|js|assets)
+
+
+
+RewriteRule ^(.*)$ - [PT,L]
+
+RewriteRule ^(.*)$ index.php/$1 [PT,L]
+
+
+<IfModule mod_expires.c>
+  ExpiresActive on
+
+ExpiresDefault "access plus 1 week"
+ExpiresByType image/gif "access plus 3 weeks"
+ExpiresByType image/png "access plus 3 weeks"
+ExpiresByType image/jpeg "access plus 3 weeks"
+ExpiresByType image/pjpeg "access plus 3 weeks"
+ExpiresByType text/javascript "modification plus 1 week"
+ExpiresByType application/javascript "modification plus 1 week"
+ExpiresByType text/css "modification plus 1 week"
+
+
+  <IfModule mod_headers.c>
+     Header append Cache-Control "public, no-transform"
+  </IfModule>
+
+</IfModule>
+
+
+## EXPIRES CACHING ##

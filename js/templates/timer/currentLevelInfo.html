@@ -1,0 +1,29 @@
+<div class="row">
+
+	<div class="col-xs-5">
+		
+		<sub data-toggle="tooltip" title="Small blind">SB</sub>&nbsp; <sub>-</sub> &nbsp;<sub data-toggle="tooltip" title="Big blind">BB</sub>
+		<br/>
+		<span name="smallBlind"> <%=current.smallBlind%></span> 
+		<span class="separator"> / </span>
+		<span name="bigBlind"><%=current.bigBlind%> </span>
+		<br/>
+		<%= lang.levelBlind %>
+	</div>
+	<div class="col-xs-2">
+		<br/>
+		<% if(current.ante > 0 ){%>
+			<span name="ante"><%=current.ante%></span>
+			<br/>
+			Ante
+			<% } %>
+	</div>
+	<div class="col-xs-5">
+		<sub data-toggle="tooltip" title="Small blind">SB</sub>&nbsp; <sub>-</sub> &nbsp;<sub data-toggle="tooltip" title="Big blind">BB</sub><br/>
+
+		<span name="smallBlind"><%=next.smallBlind%></span>
+		<span class="separator"> / </span>
+		<span name="bigBlind"><%=next.bigBlind%></span><br/>
+		<%= lang.nextLevelBlind %>
+	</div>
+</div>

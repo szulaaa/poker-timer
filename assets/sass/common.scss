@@ -1,0 +1,245 @@
+@import '_variables.scss';
+.btn-dark-blue {
+	@include border-radius(4px);
+	background: $dark-blue;
+	padding: 10px 20px;
+	color: $white;
+	font-size: 1.1em;
+	font-weight: 600;
+	cursor: pointer;
+	border: 0px;
+	.no-touchevents &:hover {
+		background: #09223C!important;
+		color: $white;
+		text-decoration: none;
+	}
+	.no-touchevents &:active,
+	.no-touchevents &:visited,
+	.no-touchevents &:focus {}
+}
+
+.btn-white {
+	@include border-radius(4px);
+	background: #fff;
+	padding: 9px 12px;
+	border: 1px solid $dark-blue;
+	display: inline-block;
+	color: $dark-blue;
+	font-size: 1.1em;
+	font-weight: bold;
+	cursor: pointer;
+	.no-touchevents &:hover {
+		text-decoration: none;
+		background: $dark-blue;
+		color: $white;
+	}
+	.no-touchevents &:active,
+	.no-touchevents &:visited,
+	.no-touchevents &:focus {
+		text-decoration: none;
+	}
+}
+
+.btn-green {
+	@include border-radius(4px);
+	background: $green;
+	padding: 10px 20px;
+	border: 0px;
+	display: inline-block;
+	color: $white;
+	font-size: 1.1em;
+	font-weight: 600;
+	cursor: pointer;
+	.no-touchevents &:hover {
+		background: #069D22!important;
+		color: $white;
+		text-decoration: none;
+	}
+	.no-touchevents &:active,
+	.no-touchevents &:visited,
+	.no-touchevents &:focus {}
+}
+
+.btn-black {
+	background: #424242;
+	padding: 4px 20px;
+	border: 1px solid #333333;
+	@include border-radius(4px);
+	color: $white;
+	font-size: 1.1em; 
+	font-weight: bold;
+	cursor: pointer;
+	&:hover {
+		@include gradient(#444444, #303030);
+		text-decoration: none
+	}
+	&:active {
+		@include box-shadow-inset( #000);
+		background: #434040;
+	}
+}
+
+body {
+
+
+	text-shadow: 1px 1px 1px #11141B;
+	font-family: 'Open Sans' !important, Calibri;
+} 
+
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+footer {
+    color: white;
+    position: fixed;
+    bottom: 0px;
+    width: 390px;
+    height: 35px;
+    right: 0px;
+    text-align: right;
+    padding-top: 9px;
+    padding-right: 9px;
+    background: rgba(10, 1, 10, 0.2);
+    font-size: 0.9em;
+     text-shadow: 0px 0px 0px;
+    span {
+        color: $grey;
+    }
+    a {
+        color: $blue;
+       
+    }
+}
+
+
+h1,h2,h3,div{font-family: 'Open Sans' !important}
+.container {
+	width: 100%;
+	max-width: 1680px;
+}
+
+a {
+	cursor: pointer;
+	color: white
+} 
+
+a:hover {
+	text-decoration: none
+}
+
+a.link {
+	color: $dark-blue;
+	outline: 0px !important;
+	.no-touchevents &:hover,
+	.no-touchevents &:active {
+		color: $dark-blue;
+	}
+}
+
+.alert{
+	width: 300px;
+	position: absolute;
+	top: 20px; 
+	right: 20px;
+	z-index: 1000;
+		opacity: 0.95;
+	a{color: #181616} 
+
+}
+
+.touchevents {
+	a:hover {
+		color: white;
+		text-decoration: none;
+	}
+}
+
+.modal-dialog {
+	display: inline-block;
+	text-align: left;
+	vertical-align: middle;
+}
+
+   select {
+        padding: 5px 3px 5px 12px;
+        border: 0px solid #2C2C2C;
+        color: white;
+        font-weight:300;
+		font-size: 1em;
+        background: rgba(10, 1, 10, 0.3);
+        display: inline-block;
+        text-align: center;
+        margin: 0 auto;
+    }
+    select > option {
+		background: #C4C4C4!important;
+        padding: 2px;
+        color: #3C3C3C;
+        text-align: left;
+        border: 0px;
+    }
+
+button:hover,
+textarea:hover,
+input:hover,
+textarea:active,
+input:active,
+button:active,
+textarea:focus,
+input:focus,
+button:focus {
+	outline: 0px !important;
+}
+
+.pointer {
+	cursor: pointer
+}
+
+ul.not-styled {
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	li {
+		display: block;
+		list-style: none;
+	}
+}
+
+.no-padding {
+	padding: 0px;
+}
+
+.rounded {
+	@include border-radius($border-radius)
+}
+
+.center {
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+a.link {
+	text-decoration: underline;
+	cursor: pointer;
+	&:hover {
+		color: $dark-blue;
+	}
+}
+
+
+hr {
+	border-top: 1px solid $grey;
+}
+

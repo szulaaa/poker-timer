@@ -1,0 +1,25 @@
+<% if(isBreak === false) { %>
+<td >
+	<span name="label" ></span>
+</td>
+
+<td>
+	<input name="smallBlind" class="" type="number"> 
+</td>
+<td>
+<input name="bigBlind" class="" type="number">
+</td>
+<td>
+	<input name="ante"  type="number" >
+</td>
+<% } else { %>
+<td colspan="4">
+	BREAK
+</td>
+<% } %>
+<td>
+	<input name="duration"  type="number" min="1" max="99">
+</td>
+<td>
+	<button class="js-delete my-btn" data-toggle="tooltip" title="Remove this level"><i class="fa fa-trash-o"></i></button>
+</td>

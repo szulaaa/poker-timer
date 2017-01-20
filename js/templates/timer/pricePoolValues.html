@@ -1,0 +1,8 @@
+
+	<% _.each(pricePoolValues, function (val, indx) { %>
+		<div data-toggle="tooltip" title="Reward for a  <%= val.place %><%= val.suffix %> place">
+		<%= val.place %><sup><%= val.suffix %></sup>: 
+		<span style="color: <%= val.color %>"><%= val.value %></span>
+		&nbsp; &nbsp;
+		</div>
+	<% }); %>

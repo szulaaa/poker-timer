@@ -1,0 +1,21 @@
+<!-- CHIP VIEW TEMPLATE -->
+<a title="Remove this chip"  class=" js-remove-chip js-show-on-focus hidden remove-token" > 
+	<i class="fa fa-trash-o"></i>
+ </a>
+<span contenteditable="true" class="value" name="value"></span>
+
+
+<select class="js-show-on-focus hidden" name="colorClass">
+	<% _.each(chips_colors, function(val, indx){ %>
+		<option value="<%=indx%>"><%=val%></option>
+	<% }); %>
+
+</select>
+
+<div class="amount " data-toggle="tooltip" title="Number of chips of this value given to player ">
+		<input class=" " 
+			name="amount"
+			value=""
+		>
+</div>
+<!-- //CHIP VIEW TEMPLATE -->

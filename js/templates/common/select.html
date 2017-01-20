@@ -1,0 +1,6 @@
+
+	    <select class="<%=name %>">
+	        <% values.each(function(value, key) { %>
+	            <option value="<%= key %>" <%= (key==selected) ? 'selected="selected"' : '' %>><%= value %></option>
+	        <% }); %>
+	    </select>

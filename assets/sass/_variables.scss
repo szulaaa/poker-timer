@@ -1,0 +1,80 @@
+$white: #fff;
+$grey: #e6e6e6;
+$black: #000;
+$dark: #2D2D2D; 
+$blue: #21B2C7; 
+
+$border-grey: #c9c9c9;
+
+$light-blue: #0156a7;
+$dark-blue: #082f5a;
+$green: #17ba5d;
+$aquamarine: #00E4FF;
+
+
+$btn-bg-green: #16bb5f;
+$btn-bg-blue: #062f5b;
+$btn-border-blue: #062f5b;
+
+$icon-grey: #a7b4bd;
+
+$border-radius: 5px;
+$margin:10px;
+$padding: 15px;
+$input-height: 32px;
+
+$screen-xs-min: 580px;
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+
+
+/*----------------Common elements---------------*/
+
+
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+}
+
+
+
+@mixin box-shadow($link-dark) {
+	-webkit-box-shadow: 3px 3px 5px 0px $link-dark;
+	-moz-box-shadow: 3px 3px 5px 0px $link-dark;
+	box-shadow: 3px 3px 5px 0px $link-dark;
+}
+
+@mixin box-shadow-param($top, $left, $blur, $color, $inset: false) {
+	@if $inset {
+		-webkit-box-shadow:inset $top $left $blur $color;
+		-moz-box-shadow:inset $top $left $blur $color;
+		box-shadow:inset $top $left $blur $color;
+	} @else {
+		-webkit-box-shadow: $top $left $blur $color;
+		-moz-box-shadow: $top $left $blur $color;
+		box-shadow: $top $left $blur $color;
+	}
+}
+
+@mixin box-shadow-inset($color) {
+	-webkit-box-shadow: inset 0px 0px 10px 0px $color;
+	-moz-box-shadow: inset 0px 0px 10px 0px $color;
+	box-shadow: inset 0px 0px 10px 0px $color;
+}
+
+@mixin gradient($foo, $bar) {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0ca0ff+0,0972b6+100 */
+	background: $foo;
+	/* Old browsers */
+	background: -moz-linear-gradient(top, $foo 0%, $bar 100%);
+	/* FF3.6-15 */
+	background: -webkit-linear-gradient(top, $foo 0%, $bar 100%);
+	/* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, $foo 0%, $bar 100%);
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+h1, h2,h3{color: #EFEFEF}
